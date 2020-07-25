@@ -1,0 +1,52 @@
+---
+title: "Potencial Cariogênico"
+subtitle: "Análise de Dados Longitudinais"
+author: "Daniel de Amaral"
+date: "`r str_to_title(format(Sys.time(), '%b, %Y'))`"
+bibliography: ./assets/references/references.bib
+output: 
+  ioslides_presentation:
+    logo: ./assets/figures/logo.png
+    css: ./assets/css/styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r load.data}
+potencialc <- tibble(voluntario = rep(1:21, 2),
+                     potencial = c(6, 0, 0, 3.37, 0, 14.25, 0, 0, 0, 0,
+                                   0.37, 14.25, 0, 14.44, 0, 0, 0, 0, 0,
+                                   12.37, 0, 3.37, 1.5, 10.69, 8.44, 2.5,
+                                   5.25, 5.5, 0.37, 1.5, 16.5, 0, 15.94,
+                                   5.25, 0, 12.25, 9.25, 9, 8.5, 9, 22.5, 0.75),
+                     momento = c(rep('Antes', 21), rep('Depois', 21)))
+```
+
+## R Markdown
+
+This is an R Markdown presentation [@RCoreTeam]. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
+## References {.allowframebreaks}
